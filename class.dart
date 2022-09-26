@@ -68,7 +68,9 @@ void main() {
   print(someStudent.fullname);
   //changing ststic field
   Student.studentlabel = "name:";
-  print(someStudent.fullname);
-  print(someStudent.initials);
-  print("Hello");
+  /*print(someStudent.fullname);
+  print(someStudent.initials);*/
+  //toString() method
+  print(someStudent); // same as calling student.toString()
+  //print("The student is: $someStudent");
 }
