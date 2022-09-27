@@ -1,5 +1,7 @@
 import 'dart:math';
 import 'dart:core';
+//problem in installing packages
+//import 'package:intl/intl.dart';
 
 const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -47,9 +49,24 @@ void main() {
 
   //generating list of numbers(for example we're a list of 15 items)
   List<int> randomList = List.generate(15, (_) => Random().nextInt(150) + 1);
-  print(randomList);
+  //print(randomList);
   //Generating from any given randon length
   randomList = List.generate(ls, (_) => Random().nextInt(150) + 1);
-  print(randomList);
-  print(RandomString(9));
+  //print(randomList);
+  //print(RandomString(9));
+
+  //converting of timestamps
+  int timestamp = DateTime.now().millisecondsSinceEpoch;
+  //print(timestamp);
+  int ts = timestamp;
+  DateTime tsdate = DateTime.fromMillisecondsSinceEpoch(ts);
+  String datetime = tsdate.year.toString() +
+      "/" +
+      tsdate.month.toString() +
+      "/" +
+      tsdate.day.toString();
+  String time = tsdate.timeZoneName.toString();
+  //String fdatetime = DateFormat('dd-MMM-yyy').format(tsdate);
+  print(datetime);
+  print(time);
 }
