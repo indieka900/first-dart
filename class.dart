@@ -55,7 +55,34 @@ class Seniour extends Student {
   String toString() => "$fullname, also known as $level";
 }
 
+//creating a book class
+class Book {
+  //attributes
+  String tittle = '';
+  String auther = '';
+  int pagenum = 0;
+  int charnum = 0;
+  //creating a constractor
+  Book(String _tittle, String Auther, int _numpages, int _numchar) {
+    this.tittle = _tittle;
+    this.auther = Auther;
+    this.pagenum = _numpages;
+    this.charnum = _numchar;
+  }
+  //creating methods
+  String longStory() {
+    if (this.pagenum > 100) {
+      return ("The book has a long story");
+    } else {
+      return ("The story in this book is not that long");
+    }
+  }
+}
+
+
+
 void main() {
+  
   //print(StudentType.values);
   /*Student someStudent = new Student();
     someStudent.firstName = "Joseph";
@@ -73,4 +100,14 @@ void main() {
   //toString() method
   print(someStudent); // same as calling student.toString()
   //print("The student is: $someStudent");
+
+  //Creating book object
+  /*Book kigogo = Book("Kigogo", "Henry", 97, 15);
+  Book kk = Book("Blossoms", "Ole Kulet", 387, 21);
+  print(kigogo.charnum);
+  print(kk.tittle);
+  print(kigogo.longStory());
+  print(kk.longStory());*/
+
+  //creating quiz game
 }

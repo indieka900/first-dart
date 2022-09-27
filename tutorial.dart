@@ -1,5 +1,6 @@
 //import "dart:math";
 import "dart:io";
+import 'dart:math';
 
 double promptOp() {
   print("Enter your number");
@@ -7,9 +8,9 @@ double promptOp() {
   return myNum;
 }
 
-String prompt(var prompText) {
+String prompt(String prompText) {
   print(prompText);
-  var answer = stdin.readLineSync();
+  String answer = stdin.readLineSync()!;
   return "${answer}";
 }
 
@@ -35,6 +36,11 @@ void gfg3(int g1, {int g2: 12}) {
 }
 
 void main() {
+  //providing randow numbers
+  var intValue = Random().nextInt(30); // Value is >= 0 and < 30.
+  print(intValue);
+  intValue = Random().nextInt(100) + 50; // Value is >= 50 and < 150.
+  print(intValue);
   //data types
   var a = 50;
   int k = 90;
@@ -45,7 +51,7 @@ void main() {
   isstudent = a != k; //which is true
   //print("Hello people is Joseph in the room");
   print("$b ${a} $isstudent");
-  print(k + kl);
+  print(intValue / k);
   //basics of strings
   /*print(b + " " + c);
   print("Take ${c} shillings");
@@ -93,7 +99,6 @@ void main() {
   //double num1 = 90;
   double num2 = promptOp();
   String op = prompt("Enter your operation -*+/");
-
   if (op == '+') {
     print(num1 + num2);
   } else if (op == '-') {
@@ -105,7 +110,6 @@ void main() {
   } else {
     print("Invalid operant");
   }
-
   //switch statement
   switch (op) {
     case '+':
@@ -126,27 +130,52 @@ void main() {
 
   //loops
   //while loop
-  int l = 1;
-  while (l <= 7) {
-    //print(l);
-    l++;
-    //print(l);
-
-    print("Calling the function with optional parameter:");
-    gfg1(01);
-
-    // Calling the function with Optional Named parameter
-    print("Calling the function with Optional Named parameter:");
-    gfg2(01, g3: 12);
-
-    // Calling function with default valued parameter
-    print("Calling function with default valued parameter");
-    gfg3(01);
+  int loop = 1;
+  while (loop <= 7) {
+    //print(loop);
+    loop++;
   }
+  //print(l);
+
+  /*(print("Calling the function with optional parameter:");
+  gfg1(01);
+
+  // Calling the function with Optional Named parameter
+  print("Calling the function with Optional Named parameter:");
+  gfg2(01, g3: 12);
+
+  // Calling function with default valued parameter
+  //print("Calling function with default valued parameter");
+  gfg3(01);
+*/
 
   String mystr = 'Hello';
   String mystr1 = ' people';
-  String raws = r'This is my first raw string';
+  String raws = r'This is my first \\ raw string';
   print(mystr + mystr1 + raws);
   print("Here we come to github account");
+
+  //guesse game
+  /* String answer = "Joseph";
+  String guese = '';
+  int count = 0;
+
+  while (guese != answer) {
+    guese = prompt("Guese the name: ");
+    count++;
+  }
+  if (count > 1) {
+    print("You won the game after ${count - 1} fails");
+  } else {
+    print("You won with 0 attempt");
+  }*/
+//for loop
+  /*List<String> friends = ['Kali', 'Osiri', 'Prizcho', 'Janes', 'okolo'];
+
+  for (String friend in friends) {
+    print(friend.toUpperCase());
+  }
+  for (int i = 0; i < friends.length; i++) {
+    print(friends[i].toLowerCase());
+  }*/
 }
