@@ -52,8 +52,9 @@ void main() {
   //print(randomList);
   //Generating from any given randon length
   randomList = List.generate(ls, (_) => Random().nextInt(150) + 1);
-  //print(randomList);
-  //print(RandomString(9));
+  print(ls);
+  print(randomList);
+  print(RandomString(9));
 
   //converting of timestamps
   int timestamp = DateTime.now().millisecondsSinceEpoch;
@@ -69,4 +70,8 @@ void main() {
   //String fdatetime = DateFormat('dd-MMM-yyy').format(tsdate);
   print(datetime);
   print(time);
+  String dattime = DateTime.now().toString();
+  var dt = DateTime.now();
+  print(dattime);
+  print("${dt.hour}h : ${dt.minute}m : ${dt.second}s on ${datetime} ");
 }
