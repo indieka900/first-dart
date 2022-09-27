@@ -53,9 +53,14 @@ void main() {
   //Generating from any given randon length
   randomList = List.generate(ls, (_) => Random().nextInt(150) + 1);
   print(ls);
-  print(randomList);
+  //print(randomList);
   print(RandomString(9));
-
+  for (int i in randomList) {
+    print(i);
+  }
+  print('Sum is of first two is: ${randomList[1] + randomList[3]}');
+  var sum = randomList.reduce((a, b) => a + b); //fuction of adding element in a list
+  print('The total number of item in my list is: ${sum}');
   //converting of timestamps
   int timestamp = DateTime.now().millisecondsSinceEpoch;
   //print(timestamp);
@@ -69,6 +74,7 @@ void main() {
   String time = tsdate.timeZoneName.toString();
   //String fdatetime = DateFormat('dd-MMM-yyy').format(tsdate);
   print(datetime);
+
   print(time);
   String dattime = DateTime.now().toString();
   var dt = DateTime.now();
