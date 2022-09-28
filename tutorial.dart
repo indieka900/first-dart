@@ -195,5 +195,15 @@ void main() {
   var result = intValue % 2 == 0 ? 'Even' : 'Odd';
   print(result);
 
+  //defining a set
+  var greetings = {
+    'Hi',
+    'Goodafternoon',
+    'Morning',
+    'Goodnight',
+    'Morning'
+  }; //reapeted one won't displayed
+  print(greetings);
+
 
 }
