@@ -3,6 +3,20 @@ import "dart:io";
 import 'dart:math';
 //import 'dart:svg';
 
+//for try and catch method
+class EmptyNameException implements Exception {
+  String cause;
+  EmptyNameException(this.cause);
+}
+
+void displayName(str) {
+  if (str.length > 0) {
+    print(str);
+  } else {
+    throw new EmptyNameException('Name is empty.');
+  }
+}
+
 double promptOp() {
   print("Enter your number");
   double myNum = double.parse(stdin.readLineSync()!);
@@ -38,9 +52,9 @@ void gfg3(int g1, {int g2: 12}) {
 
 void main() {
   //providing randow numbers
-  var intValue = Random().nextInt(30); // Value is >= 0 and < 30.
+  var intValue = Random().nextInt(17); // Value is >= 0 and < 30.
   print(intValue);
-  intValue = Random().nextInt(100) + 50; // Value is >= 50 and < 150.
+  //intValue = Random().nextInt(100) - 75; // Value is >= 50 and < 150.
   print(intValue);
   //data types
   var a = 50;
@@ -187,9 +201,27 @@ void main() {
   print(km);
   km = friends.where((f) => f.isNotEmpty).toList();
   print(km);
-  var data = ['abc', 123, 456, 'def', false, {1, 2, 3}, true, 123.456];
+  var data = [
+    'abc',
+    123,
+    456,
+    123,
+    'def',
+    false,
+    {1, 2, 3},
+    true,
+    123.456
+  ];
+//using for loop to filter data in list
+  for (var dat in data) {
+    if (dat.runtimeType == int) print(dat);
+  }
 
-  final nums = data.whereType<double>().toList(); //to list not necessary
+  for (var dat in data) {
+    if (dat == 123) print(dat);
+  }
+
+  final nums = data.whereType<double>().toList(); //.toList() not necessary here
   print('Double: $nums');
 
   var nm = data.whereType<Set>();
@@ -228,7 +260,7 @@ void main() {
   print(result);
 
   //defining a set
-  var greetings = {
+  var greetings = <String>{
     'Hi',
     'Goodafternoon',
     'Morning',
@@ -236,6 +268,9 @@ void main() {
     'Morning'
   }; //reapeted one won't displayed
   print(greetings);
+  greetings.add("Hey"); //adding a single element in a set
+  greetings.addAll(strings); //adding multiple element in a set
+  greetings.remove("Hi"); //deleting element in a list
 
   //defining a map
   var prizes = {'First': 1250, 'Second': 750, 'Third': 500};
@@ -246,4 +281,37 @@ void main() {
   fruits['red'] = 'Straberries';
   fruits['yellow'] = 'Banana';
   print(fruits['yellow']);
+
+  var name = '';
+  //displayName(name); this causes an error and the program terminates
+  try {
+    displayName(name);
+  } on EmptyNameException {
+    print('Given name is empty.');
+  }
+
+  //factorial
+  var factorial = 1;
+  for (var i = 2; i <= intValue; i++) {
+    factorial = factorial * i;
+  }
+  print('Factorial of ${intValue} is ${factorial}');
+  print(greetings.runtimeType);
+  print(greetings.elementAt(3)); //accessing an element in set called greetings
+  print(greetings.length); //print the total number of items/elements in a set
+//more concepts in set
+  var aa = <int>{10, 12, 14, 16, 18};
+  var bb = <int>{5, 7, 9, 11, 13};
+  var cc = <int>{2, 3, 5, 7};
+  print("bb union aa is");
+  print(bb.union(aa));
+  print("bb intersection cc is");
+  print(bb.intersection(cc));
+  print("bb difference cc is");
+  print(bb.difference(cc));
+  print("cc difference bb is");
+  print(cc.difference(bb));
+  print("aa difference cc is");
+  print(aa.difference(cc));
+  print(aa.hashCode);
 }
