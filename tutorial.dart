@@ -205,5 +205,13 @@ void main() {
   }; //reapeted one won't displayed
   print(greetings);
 
-
+  //defining a map
+  var prizes = {'First': 1250, 'Second': 750, 'Third': 500};
+  print(prizes['Third']);
+  //OR
+  var fruits = Map();
+  fruits['green'] = 'Mangos';
+  fruits['red'] = 'Straberries';
+  fruits['yellow'] = 'Banana';
+  print(fruits['yellow']);
 }
