@@ -19,6 +19,7 @@ List<String> op = ['+', '*', '/', '-'];
 
 void main() {
   double intValue = Random().nextInt(40) + 5; // Value is >= 0 and < 40.
+  int intVa = Random().nextInt(11) + 1;
   int ls = Random().nextInt(10) + 5;
   double Value = Random().nextInt(15) + 50; // Value is >= 50 and < 150.
   double intValue1 = Random().nextInt(8) - 3; // Value is >= 0 and < 30.
@@ -26,7 +27,7 @@ void main() {
   var tobe = op[rndop.nextInt(op.length)];
   List<String> friends = ['Kali', 'Osiri', 'Prizcho', 'Janes', 'okolo'];
   print(tobe);
-
+/*
   for (String friend in friends) {
     print(friend.toUpperCase());
     print("$Value $tobe $intValue");
@@ -34,7 +35,7 @@ void main() {
     print("$Value1 $tobe $intValue =");
     tobe = op[rndop.nextInt(op.length)];
     //print(tobe);
-  }
+  }*/
   if (Value <= 17 || intValue1 <= 17) {
     if (Value1 >= 100 && intValue >= Value) {
       print("Nested if archieved.");
@@ -52,14 +53,15 @@ void main() {
   //print(randomList);
   //Generating from any given randon length
   randomList = List.generate(ls, (_) => Random().nextInt(150) + 1);
-  print(ls);
+  //print(ls);
   //print(randomList);
-  print(RandomString(9));
+  //print(RandomString(intVa)); //for printing random char
   for (int i in randomList) {
-    print(i);
+    //print(i);
   }
-  print('Sum is of first two is: ${randomList[1] + randomList[3]}');
-  var sum = randomList.reduce((a, b) => a + b); //fuction of adding element in a list
+  print('Sum is of first two is: ${randomList[1] + randomList[0]}');
+  var sum =
+      randomList.reduce((a, b) => a + b); //fuction of adding element in a list
   print('The total number of item in my list is: ${sum}');
   //converting of timestamps
   int timestamp = DateTime.now().millisecondsSinceEpoch;
@@ -78,6 +80,6 @@ void main() {
   print(time);
   String dattime = DateTime.now().toString();
   var dt = DateTime.now();
-  print(dattime);
+  //print(dattime);
   print("${dt.hour}h : ${dt.minute}m : ${dt.second}s on ${datetime} ");
 }

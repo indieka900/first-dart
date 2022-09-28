@@ -51,7 +51,7 @@ void main() {
   isstudent = a != k; //which is true
   //print("Hello people is Joseph in the room");
   print("$b ${a} $isstudent");
-  print(intValue / k);
+  print('${intValue / k}');
   //basics of strings
   /*print(b + " " + c);
   print("Take ${c} shillings");
@@ -152,6 +152,10 @@ void main() {
   String mystr = 'Hello';
   String mystr1 = ' people';
   String raws = r'This is my first \\ raw string';
+  var multilinstr = '''Hello people this 
+  is also a multi-
+  string''';
+  print(multilinstr);
   print(mystr + mystr1 + raws);
   print("Here we come to github account");
 
@@ -170,12 +174,26 @@ void main() {
     print("You won with 0 attempt");
   }*/
 //for loop
-  /*List<String> friends = ['Kali', 'Osiri', 'Prizcho', 'Janes', 'okolo'];
+  List<String> friends = ['Kali', 'Osiri', 'Prizcho', 'Janes', 'okolo'];
+  var nonSpecificList = ['Hello', 500, 23.95];
 
-  for (String friend in friends) {
+  /*for (String friend in friends) {
     print(friend.toUpperCase());
   }
+  friends.forEach((element) => print("Hi, ${element.toLowerCase} "));
   for (int i = 0; i < friends.length; i++) {
     print(friends[i].toLowerCase());
   }*/
+  //declairing a variable then assigning it with a default value
+  // by using (?.), (??), (??=)
+  var num;
+  print(num ??= 100);
+  num = 120;
+  print(num);
+
+  //checking if the number is even or odd
+  var result = intValue % 2 == 0 ? 'Even' : 'Odd';
+  print(result);
+
+
 }
