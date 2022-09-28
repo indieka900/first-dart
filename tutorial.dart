@@ -1,6 +1,7 @@
 //import "dart:math";
 import "dart:io";
 import 'dart:math';
+//import 'dart:svg';
 
 double promptOp() {
   print("Enter your number");
@@ -185,6 +186,27 @@ void main() {
   km = friends.where((f) => f.endsWith("a")).toList();
   print(km);
   km = friends.where((f) => f.isNotEmpty).toList();
+  print(km);
+  var data = ['abc', 123, 456, 'def', false, {1, 2, 3}, true, 123.456];
+
+  final nums = data.whereType<double>().toList(); //to list not necessary
+  print('Double: $nums');
+
+  var nm = data.whereType<Set>();
+  print('Set: $nm');
+
+  final ints = data.whereType<int>();
+  print('Integers: $ints');
+
+  final strings = data.whereType<String>();
+  print('Strings: $strings');
+
+  final booleans = data.whereType<bool>();
+  print('Booleans: $booleans');
+  //filtering integer list
+  var lis = [-1, 0, 2, 4, 7, 9];
+  //km = lis.where((x) => x > 2) --> [4, 7, 9];
+  //print('${[-1, 0, 2, 4, 7, 9].where((x) => x > 2) --> [4, 7, 9]}');
   print(km);
 
   /*for (String friend in friends) {
