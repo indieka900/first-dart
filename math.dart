@@ -20,7 +20,7 @@ String prompt(var prompText) {
 }
 
 void main(List<String> args) {
-  /*print("Enter the color");
+  print("Enter the color");
   var color = stdin.readLineSync();
   print("Enter the plural noun");
   var pluralNoun = stdin.readLineSync();
@@ -28,28 +28,28 @@ void main(List<String> args) {
   var celebrity = stdin.readLineSync();
   print("Roses are $color");
   print("$pluralNoun are blue");
-  print("I love $celebrity");*/
+  print("I love $celebrity");
 
   //arrays/lists
-  /*List<int> favNums = [2, 32, 52, 74];
+  List<int> favNums = [2, 32, 52, 74];
   print(favNums);
   print(favNums[2]);
   favNums[2] = 71;
   favNums.add(18);
   favNums.remove(4);
   print(favNums);
-  print(favNums.indexOf(32));*/
+  print(favNums.indexOf(32));
 
   //function\method
-  //drawtriangle();
+  drawtriangle();
 
-  /*print("Enter your name: ");
+  print("Enter your name: ");
   var myname = stdin.readLineSync();
   print("Enter your age: ");
   int age = int.parse("${stdin.readLineSync()}");
-  sayHi("${myname}", age);*/
+  sayHi("${myname}", age);
   print(addNumber(12.4, 8.125));
-  var color = prompt("Enter the color: ");
+  color = prompt("Enter the color: ");
   var name = prompt("Enter the name: ");
   print("The color for $name is $color");
 }
