@@ -177,6 +177,16 @@ void main() {
   List<String> friends = ['Kali', 'Osiri', 'Prizcho', 'Janes', 'okolo'];
   var nonSpecificList = ['Hello', 500, 23.95];
 
+//list filtering
+  var km = friends.where((f) => f.startsWith('J')).toList();
+  print(km);
+  km = friends.where((f) => f.contains("a")).toList();
+  print(km);
+  km = friends.where((f) => f.endsWith("a")).toList();
+  print(km);
+  km = friends.where((f) => f.isNotEmpty).toList();
+  print(km);
+
   /*for (String friend in friends) {
     print(friend.toUpperCase());
   }
