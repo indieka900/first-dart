@@ -268,8 +268,7 @@ void main() {
     'Hi',
     'Goodafternoon',
     'Morning',
-    'Goodnight',
-    'Morning'
+    'Goodnight'
   }; //reapeted one won't displayed
   print(greetings);
   greetings.add("Hey"); //adding a single element in a set
