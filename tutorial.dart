@@ -66,39 +66,39 @@ void main() {
   bool isstudent = true;
   isstudent = a != k; //which is true
   //print("Hello people is Joseph in the room");
-  print("$b ${a} $isstudent");
+  print("$b ${a} $isstudent $kl");
   print('${intValue / k}');
   //basics of strings
-  /*print(b + " " + c);
+  print(b + " " + c);
   print("Take ${c} shillings");
   print(c[2]);
   print(c.length);
   print(c.indexOf("y"));
   print(c.contains("y"));
-  print(c.toUpperCase());*/
+  print(c.toUpperCase());
   //basics of numbers
-  /*a += 24; //increment to 74
+  a += 24; //increment to 74
   a--; //decrement by 1 to 73
   print(a);
   print(min(a, k)); //can use max()
-  print(sqrt(256));*/
+  print(sqrt(256));
   //drawing tringle
-  /*print("    /|");
+  print("    /|");
   print("   / |");
   print("  /  |");
   print(" /   |");
-  print("/____|");*/
+  print("/____|");
 
   //user input
-  /*print("Enter your first number: ");
+  print("Enter your first number: ");
   double num1 = double.parse("${stdin.readLineSync()}");
   print("Enter your second number: ");
   double num2 = double.parse("${stdin.readLineSync()}");
-  //print(int.parse("${num1}") + int.parse("${num2}"));
-  print(num1 + num2);*/
+  print(int.parse("${num1}") + int.parse("${num2}"));
+  print(num1 + num2);
 
   //if statement
-  /*if (c.contains('f')) {
+  if (c.contains('f')) {
     print("It has the letter f");
   } else {
     print("It do not contain");
@@ -111,12 +111,12 @@ void main() {
   } else {
     print("None of the above");
   }
-  double num1 = promptOp();
+  double num = promptOp();
   //double num1 = 90;
-  double num2 = promptOp();
+  double num4 = promptOp();
   String op = prompt("Enter your operation -*+/");
   if (op == '+') {
-    print(num1 + num2);
+    print(num4 + num2);
   } else if (op == '-') {
     print(num1 - num2);
   } else if (op == '/') {
@@ -142,7 +142,7 @@ void main() {
       break;
     default:
       print("Invalid operant");
-  }*/
+  }
 
   //loops
   //while loop
@@ -176,7 +176,7 @@ void main() {
   print("Here we come to github account");
 
   //guesse game
-  /* String answer = "Joseph";
+   String answer = "Joseph";
   String guese = '';
   int count = 0;
 
@@ -188,10 +188,10 @@ void main() {
     print("You won the game after ${count - 1} fails");
   } else {
     print("You won with 0 attempt");
-  }*/
+  }
 //for loop
   List<String> friends = ['Kali', 'Osiri', 'Prizcho', 'Janes', 'okolo'];
-  var nonSpecificList = ['Hello', 500, 23.95];
+  //var nonSpecificList = ['Hello', 500, 23.95];
 
 //list filtering
   var km = friends.where((f) => f.startsWith('J')).toList();
@@ -237,10 +237,10 @@ void main() {
   final booleans = data.whereType<bool>();
   print('Booleans: $booleans');
   //filtering integer list
-  var lis = [-1, 0, 2, 4, 7, 9];
+  //var lis = [-1, 0, 2, 4, 7, 9];
   //this line will print joseph 21 times
   List auto = List.filled(21, 'Joseph');
-  //print(auto);
+  print(auto);
   //km = lis.where((x) => x > 2) --> [4, 7, 9];
   //print('${[-1, 0, 2, 4, 7, 9].where((x) => x > 2) --> [4, 7, 9]}');
   print(km);
@@ -254,8 +254,8 @@ void main() {
   }*/
   //declairing a variable then assigning it with a default value
   // by using (?.), (??), (??=)
-  var num;
-  print(num ??= 100);
+  var num5;
+  print(num5 ??= 100);
   num = 120;
   print(num);
 

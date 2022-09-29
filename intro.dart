@@ -12,7 +12,7 @@ main(){
     for (var i=2; i<5; i++){
         //print('hello joseph $i');
     }
-    var func = myFunc;
+    //var func = myFunc;
     var a = 'world';
     var b = 12 + 23;
     //var c = 45 / 12; //results in a double part
@@ -24,16 +24,16 @@ main(){
     print('hello $b ');
     print('$c reminder $d');
     print(c == d);//false
-    print(c is int);//true
+    //print(c is int);//true
     print(aa.length);
     print(reflect(b).type.reflectedType.toString());
     print(myFunc()); //same as print(func())
-    print(sayHello('Joseph')); //it uses default value for the additional message
+    print(sayHello('Joseph ${a}')); //it uses default value for the additional message
     print(sayHello('Joseph', 'How was your day?'));
     var lists = {4,6,5,7};
     lists.add(10);
     var list2 = ['kalli','Noma',1];
     list2.add(3);
     print(list2);
-    //lists.forEach((number) => print('hello $number'));
+    lists.forEach((number) => print('hello $number'));
 }
