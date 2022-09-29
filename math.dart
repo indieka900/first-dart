@@ -42,7 +42,6 @@ void main(List<String> args) {
 
   //function\method
   drawtriangle();
-
   print("Enter your name: ");
   var myname = stdin.readLineSync();
   print("Enter your age: ");
