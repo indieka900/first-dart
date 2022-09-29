@@ -27,7 +27,7 @@ void main() {
   var tobe = op[rndop.nextInt(op.length)];
   List<String> friends = ['Kali', 'Osiri', 'Prizcho', 'Janes', 'okolo'];
   print(tobe);
-/*
+
   for (String friend in friends) {
     print(friend.toUpperCase());
     print("$Value $tobe $intValue");
@@ -35,7 +35,7 @@ void main() {
     print("$Value1 $tobe $intValue =");
     tobe = op[rndop.nextInt(op.length)];
     //print(tobe);
-  }*/
+  }
   if (Value <= 17 || intValue1 <= 17) {
     if (Value1 >= 100 && intValue >= Value) {
       print("Nested if archieved.");
@@ -50,14 +50,14 @@ void main() {
 
   //generating list of numbers(for example we're a list of 15 items)
   List<int> randomList = List.generate(15, (_) => Random().nextInt(150) + 1);
-  //print(randomList);
+  print(randomList);
   //Generating from any given randon length
   randomList = List.generate(ls, (_) => Random().nextInt(150) + 1);
-  //print(ls);
-  //print(randomList);
-  //print(RandomString(intVa)); //for printing random char
+  print(ls);
+  print(randomList);
+  print(RandomString(intVa)); //for printing random char
   for (int i in randomList) {
-    //print(i);
+    print(i);
   }
   print('Sum is of first two is: ${randomList[1] + randomList[0]}');
   var sum =
@@ -80,6 +80,6 @@ void main() {
   print(time);
   String dattime = DateTime.now().toString();
   var dt = DateTime.now();
-  //print(dattime);
+  print(dattime);
   print("${dt.hour}h : ${dt.minute}m : ${dt.second}s on ${datetime} ");
 }
