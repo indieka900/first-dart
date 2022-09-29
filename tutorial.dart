@@ -57,7 +57,8 @@ void main() {
   //intValue = Random().nextInt(100) - 75; // Value is >= 50 and < 150.
   print(intValue);
   //data types
-  var a = 50;
+  late int a;
+  a = 50;
   int k = 90;
   double kl = 3.9987;
   var b = "My age is";
@@ -237,6 +238,9 @@ void main() {
   print('Booleans: $booleans');
   //filtering integer list
   var lis = [-1, 0, 2, 4, 7, 9];
+  //this line will print joseph 21 times
+  List auto = List.filled(21, 'Joseph');
+  //print(auto);
   //km = lis.where((x) => x > 2) --> [4, 7, 9];
   //print('${[-1, 0, 2, 4, 7, 9].where((x) => x > 2) --> [4, 7, 9]}');
   print(km);

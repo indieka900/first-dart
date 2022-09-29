@@ -6,8 +6,8 @@ List<String> op = ['+', '*', '/', '-'];
 
 
 class MathQuestion {
-  String question = '';
-  double answer = 0;
+  late String question;
+  late double answer;
 
   MathQuestion(String aquation, double _answer) {
     this.question = aquation;
@@ -17,8 +17,8 @@ class MathQuestion {
 
 main(){
   double intValue = Random().nextInt(30) + 5; // Value is >= 0 and < 30.
-  double Value = Random().nextInt(100) + 50; // Value is >= 50 and < 150.
-  double intValue1 = Random().nextInt(8) - 3; // Value is >= 0 and < 30.
+  double Value = Random().nextInt(100) + 50; 
+  double intValue1 = Random().nextInt(20) - 3;
   double Value1 = Random().nextInt(10) + intValue;
   double intValue2 = Random().nextInt(12) + intValue1; // Value is >= 0 and < 30.
   double Value2 = Random().nextInt(5) / 10;
