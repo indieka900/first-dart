@@ -15,6 +15,46 @@ main() {
 
   //Skip ignores the element starting from index 0 to the provided index
   print(mixList.skip(3));
-  myList[3] *= 5;//multiplies the element at index[3] by 5
+  myList[3] *= 5; //multiplies the element at index[3] by 5
   print(myList);
+
+  var names = ['Kalijin', 'Haro', 'Alphamen', 'ABdul', 'ABDUL', 'abdul'];
+  //sorting alphabetically with case sensitive
+  names.sort((a, b) => a.toUpperCase().compareTo(b.toUpperCase()));
+  print(names);
+  //sorting by length of name
+  names.sort((a, b) {
+    if (a.length > b.length)
+      return 1;
+    else
+      return -1;
+  });
+  print(names);
+
+  var numerics = [54, 8, 74, 24, 61, 34, 20, 5, 9, 18, 3, 87, 13, 47];
+  //sort in ascending order
+  var sortedNumerics = bubbleSort(numerics, (p0, p1) => p0 < p1);
+  print(sortedNumerics);
+  //sorting in descending order
+  sortedNumerics = bubbleSort(numerics, (p0, p1) => p0 > p1);
+  print(sortedNumerics);
+  sortedNumerics = bubbleSort(myList, (p0, p1) => p0 < p1);
+  print(sortedNumerics);
+}
+
+//sorting function
+List bubbleSort(List items, bool Function(int, int) compareFunction) {
+  for (var j = 0; j < items.length - 1; j++) {
+    var swapped = false;
+    for (var i = 0; i < items.length - 1; i++) {
+      if (!compareFunction(items[i], items[i + 1])) {
+        var t = items[i + 1];
+        items[i + 1] = items[i];
+        items[i] = t;
+        swapped = true;
+      }
+    }
+    if (!swapped) break;
+  }
+  return items;
 }
