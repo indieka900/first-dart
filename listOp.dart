@@ -1,6 +1,6 @@
 main() {
   var myList = [1, 2, 3, 4, 5, 6, 7];
-  myList.shuffle();
+  myList.shuffle(); //chooses random values
   print(myList);
   print(myList.reversed.toList());
   //obtaining a sublist from main list by declaring the start index
@@ -40,6 +40,22 @@ main() {
   print(sortedNumerics);
   sortedNumerics = bubbleSort(myList, (p0, p1) => p0 < p1);
   print(sortedNumerics);
+  sortedNumerics = bubbleSort(myList, (p0, p1) => p0 > p1);
+  print(sortedNumerics);
+
+  //fixed size array/list
+  var fx = new List.generate(2, (counter) => []);
+  fx[1].add(1);
+  fx[0].add(5);
+  print(fx);
+  final fx1 = List.filled(4, [],
+      growable:
+          true); //set growable to true makes the list to accept the adition of item
+  fx1[0].add('7');
+  fx1[1].add('17');
+  fx1[2].add('127');
+  fx1[3].add('127');
+  print(fx1);
 }
 
 //sorting function
